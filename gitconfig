@@ -1,0 +1,11 @@
+[branch]
+	autosetuprebase = always
+[user]
+	name = Chelsea Robb
+	email = crobb@yourtutor.com.au
+[credential]
+	helper = osxkeychain
+[core]
+  editor = /usr/bin/vim
+[push]
+	default = current
