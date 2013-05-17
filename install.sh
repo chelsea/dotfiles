@@ -19,7 +19,13 @@ for name in *; do
         fi
         mv update_tmp "$target"
       else
-        echo "WARNING: $target exists but is not a symlink."
+        rm $target
+        echo "Creating $target"
+        if [[ -n `grep "$cutstring" "$name"` ]]; then
+          cp "$PWD/$name" "$target"
+        else
+          ln -s "$PWD/$name" "$target"
+        fi
       fi
     fi
   else
