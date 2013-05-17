@@ -50,7 +50,6 @@ alias spec="bundle exec rspec"
 alias at="AUTOFEATURE=true bundle exec autotest"
 alias be="bundle exec"
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function' Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
@@ -91,4 +90,4 @@ export EC2_PRIVATE_KEY="$(/bin/ls "$HOME"/.ec2/pk-*.pem | /usr/bin/head -1)"
 export EC2_CERT="$(/bin/ls "$HOME"/.ec2/cert-*.pem | /usr/bin/head -1)"
 export EC2_HOME="/usr/local/Library/LinkedKegs/ec2-api-tools/jars"
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+source /opt/boxen/env.sh
